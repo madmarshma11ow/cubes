@@ -99,14 +99,12 @@ body {
   width: 4px;
   height: 28px;
   background-color: black;
-  transform: translate(0, -2px);
 }
 
 .legs_right {
   width: 4px;
   height: 28px;
   background-color: black;
-  transform: translate(0, -2px);
 }
 
 .road {
