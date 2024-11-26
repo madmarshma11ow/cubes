@@ -1,0 +1,259 @@
+body {
+  background-color: black;
+}
+.main {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: gray;
+}
+
+.boxes {
+  display: flex;
+}
+
+.boxes-small-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: solid;
+  border-radius: 5px;
+  animation-name: move-box;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.small-box-eye {
+  width: 10px;
+  height: 10px;
+  border: solid;
+  border-radius: 10px;
+}
+
+.box-eye_pupil {
+  width: 50%;
+  height: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  animation-name: box-eye-pupil;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.boxes-big-box {
+  position: absolute;
+  width: 30px;
+  height: 38px;
+  border: solid;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: gray;
+  transform: translate(70px, -15px);
+  z-index: 3;
+  animation-name: door-up;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.big-box-eye {
+  width: 10px;
+  height: 10px;
+  border: solid;
+  border-radius: 10px;
+  margin: 2px auto;
+}
+
+.big-box-eye_pupil {
+  width: 50%;
+  height: 50%;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  animation-name: big-box-eye-pupil;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.big-box-legs {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  transform: translate(75px, -1px);
+}
+
+.legs_left {
+  width: 4px;
+  height: 28px;
+  background-color: black;
+  transform: translate(0, -2px);
+}
+
+.legs_right {
+  width: 4px;
+  height: 28px;
+  background-color: black;
+  transform: translate(0, -2px);
+}
+
+.road {
+  display: flex;
+  width: 204px;
+  height: 4px;
+  border-radius: 5px;
+  border-bottom: 1px solid;
+  background-color: black;
+}
+
+@keyframes move-box {
+  0% {
+    transform: translateX(-120px) rotateZ(0deg);
+  }
+  5% {
+    transform: translateX(-100px) rotateZ(90deg);
+  }
+  10% {
+    transform: translateX(-80px) rotateZ(180deg);
+  }
+  15% {
+    transform: translateX(-60px) rotateZ(270deg);
+  }
+  20% {
+    transform: translateX(-40px) rotateZ(360deg);
+  }
+  25% {
+    transform: translateX(-20px) rotateZ(450deg);
+  }
+  30% {
+    transform: translateX(0px) rotateZ(540deg);
+  }
+  35% {
+    transform: translateX(20px) rotateZ(630deg);
+  }
+  40%,
+  70% {
+    transform: translateX(40px) rotateZ(720deg);
+  }
+  75% {
+    transform: translateX(60px) rotateZ(810deg);
+  }
+  80% {
+    transform: translateX(80px) rotateZ(900deg);
+  }
+  85% {
+    transform: translateX(100px) rotateZ(990deg);
+  }
+  90% {
+    transform: translateX(120px) rotateZ(1080deg);
+  }
+  100% {
+    transform: translateX(120px) rotateZ(1080deg);
+  }
+}
+
+@keyframes box-eye-pupil {
+  0% {
+    background-color: transparent;
+    transform: translate(5px, 0);
+  }
+  40% {
+    background-color: transparent;
+    transform: translate(5px, 3px);
+  }
+  45% {
+    background-color: aqua;
+    transform: translate(5px, 2px);
+  }
+  71% {
+    background-color: aqua;
+    transform: translate(3px, 0);
+  }
+  72% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes big-box-eye-pupil {
+  0% {
+    background-color: transparent;
+    transform: translate(2px, 0);
+  }
+  25% {
+    background-color: transparent;
+    transform: translate(0, 3px);
+  }
+  30% {
+    background-color: red;
+    transform: translate(0, 3px);
+  }
+  40% {
+    transform: translate(0px, 4px);
+  }
+  75% {
+    transform: translate(1px, 4px);
+  }
+
+  76% {
+    transform: translate(1px, 5px);
+  }
+  77% {
+    transform: translate(2px, 5px);
+  }
+  78% {
+    transform: translate(2px, 5px);
+  }
+  79% {
+    transform: translate(3px, 5px);
+  }
+  80% {
+    transform: translate(4px, 5px);
+  }
+  81% {
+    transform: translate(4px, 4px);
+  }
+
+  90% {
+    background-color: red;
+    transform: translate(5px, 5px);
+  }
+  91% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes door-up {
+  0% {
+    transform: translate(70px, -15px);
+  }
+  60% {
+    transform: translate(70px, -15px);
+  }
+  65% {
+    transform: translate(70px, -45px);
+  }
+  84% {
+    transform: translate(70px, -45px);
+  }
+  100% {
+    transform: translate(70px, -15px);
+  }
+}
